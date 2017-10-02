@@ -18,11 +18,8 @@ def binarySearch(stock,low,high,item):
 
 #when using this as a standalone module
 if __name__ == "__main__":
-    num = []
     n = int(input("Enter number of elements: "))
-    #print("Now enter elements in SORTED ORDER ONLY")
-    for x in range(n):
-        num.append(int(input()))
+    num = [int(input()) for x in range(n)]
     find = int(input("Enter element to search: "))
     num.sort()
     if binarySearch(num, 0, n-1, find) != -1:

@@ -1,21 +1,19 @@
 import time
 import random
-import linearSearch
-import binarySearch
+from linearSearch import linearSearch
+from binarySearch import binarySearch
 
 # make a pool outta random numbers
-data = []
 print("Generating a MILLION data items...")
-for x in range(1000000):
-    data.append(random.randint(0,1000))
+data = [random.randint(0,1000) for x in range(1000000)]
 print("Data pool generated.")
-
+sortedData = sorted(data)
 search = int(input("enter the item to be searched: "))
-t1 = time.clock()
-linearSearch.linearSearch(data, search)
-t2 = time.clock()
-data.sort() #because sorting is an overhead for binarySearch
-t3 = time.clock()
-binarySearch.binarySearch(data, 0, 999999, search)
-t4 = time.clock()
-print("<~~:: Running Time Taken ::~~>\n1)LinearSearch: %f seconds\n2)BinarySearch: %f seconnds" % ((t2-t1),(t4-t3)))
+
+while True:
+    algo = input("Select Algorithm (binary/linear/exit): ")
+    if algo == "exit": break
+    t1 = time.clock()
+    linearSearch(data, search) if algo == "linear" else binarySearch(sortedData, 0, 999999, search)
+    t2 = time.clock()
+    print("Running Time Taken = %f" % (t2-t1))

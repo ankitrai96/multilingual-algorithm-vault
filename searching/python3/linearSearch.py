@@ -11,10 +11,8 @@ def linearSearch(pool,item):
 
 #when using this as a standalone module
 if __name__ == "__main__":
-    num = []
     n = int(input("Enter number of elements: "))
-    for x in range(n):
-        num.append(int(input()))
+    num = [int(input()) for x in range(n)]
     find = int(input("Enter element to search: "))
     result = linearSearch(num, find)
     if result: print("Element found at ", result)
