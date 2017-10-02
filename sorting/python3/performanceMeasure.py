@@ -1,11 +1,12 @@
 import time
 import random
-from bubbleSort import bubbltSort
+from bubbleSort import bubbleSort
 from insertionSort import insertionSort
 from selectionSort import selectionSort
+from mergeSort import mergeSort
 
 # make a pool outta random numbers
-algo = {"bubble":bubbltSort, "selection":selectionSort, "insertion":insertionSort}
+algo = {"bubble":bubbleSort, "selection":selectionSort, "insertion":insertionSort, "merge":mergeSort}
 
 print("Generating a MILLION data items...")
 data = [random.randint(0,1000) for x in range(1000000)]

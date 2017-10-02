@@ -1,4 +1,4 @@
-def bubbltSort(data):
+def bubbleSort(data):
     l = len(data)
     for x in range(l):
         for y in range(0,l-x-1):
@@ -9,5 +9,5 @@ def bubbltSort(data):
 if __name__ == "__main__":
     n = int(input("Enter number of data: "))
     data = [int(input()) for x in range(n)]
-    bubbltSort(data)
+    bubbleSort(data)
     print(data)
