@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Searching Algo</title>
+        <script src=linear.js ></script>
+        <script src=binary.js ></script>   
+        <script src=main.js ></script>
+            
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>Performance Measurement of searching algorithms</h1>
+            </div>
+            <div class="about">
+                <p>Please select a searching algorithm to check its performance</p>         
+            </div>    
+            <div class="body">
+                    <select id="algorithm" onchange=algorithm(value)>
+                            <option value="linear">Linear Search</option>
+                            <option value="binary">Binary Search</option>
+                    </select>
+                    <button onclick=checkPerformance()>Check</button>
+            </div>
+            <div class="footer">
+                <p id="time"></p>
+                <p id="result"></p>
+            </div>
+        </div>        
+    </body>
+</html>
