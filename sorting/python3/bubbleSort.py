@@ -10,4 +10,4 @@ if __name__ == "__main__":
     n = int(input("Enter number of data: "))
     data = [int(input()) for x in range(n)]
     bubbleSort(data)
-    print(data)
+    for x in data: print(x)
