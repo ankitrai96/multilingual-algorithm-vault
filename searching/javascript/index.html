@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Searching Algo</title>
+        <!--searching algorithms-->
+        <script src="searching/linear.js" ></script>
+        <script src="searching/binary.js" ></script>
+        <script src="searching/jump.js" ></script>
+
+        <!--sorting algorithms-->
+
+        <!--driver program-->
+        <script src="main.js" ></script>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>Performance Measurement of searching algorithms</h1>
+            </div>
+            <div class="about">
+                     
+            </div> 
+            <div class="left">
+                       
+            </div>
+            <div class="right">
+
+            </div>   
+            <div class="body">
+                <p>Please select a <b>searching algorithm</b> to check its performance</p>    
+                <select id="searching_algorithm" onchange=algorithm(value)>
+                        <option value="linear">Linear Search</option>
+                        <option value="binary">Binary Search</option>
+                        <option value="jump">Jump Search</option>
+                </select>
+                <button onclick=checkPerformance()>Check</button>
+                <p>Please select a <b>sorting algorithm</b> to check its performance</p>    
+                <select id="sorting_algorithm" onchange=algorithm(value)>
+                    
+                </select>
+                <button onclick=checkPerformance()>Check</button>
+            </div>
+            <div class="footer">
+                <p id="time"></p>
+                <p id="result"></p>
+            </div>
+        </div>        
+    </body>
+</html>
