@@ -1,4 +1,10 @@
-function binary(data,l,r,value){
+/*
+*Time Complexity= Theta(log n)
+*works only in sorted array
+*starts Searching in a sorted array by repeatedly dividing the search interval in half
+*/
+
+function binarySearch(data,l,r,value){
     while (l <= r){
         var m = parseInt(l + (r-l)/2);
     
@@ -16,5 +22,5 @@ function binary(data,l,r,value){
     }
     
     // if we reach here, then element was not present
-    return "element does not exists"+m;   
+    return "element does not exists";   
 }
