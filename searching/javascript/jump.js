@@ -1,3 +1,10 @@
+/*
+*Time Complexity:- O(√ n)
+*Works only in sorted arrays
+*effective than binary search in case element to search is towards the ends.
+*optimal size of a block to be jumped is O(√ n)
+*/
+
 function jump(arr,x,n){
     // Finding block size to be jumped
     var step = Math.sqrt(n);
@@ -25,7 +32,7 @@ function jump(arr,x,n){
     }
     // If element is found
     if (arr[prev] == x){
-        return "find at first index "+prev;
+        return "find at index "+prev;
     }
     
     return "element does not exists";
