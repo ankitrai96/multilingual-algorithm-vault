@@ -4,9 +4,13 @@ from bubbleSort import bubbleSort
 from insertionSort import insertionSort
 from selectionSort import selectionSort
 from mergeSort import mergeSort
+from quickSort import quickSort
 
-# make a pool outta random numbers
-algo = {"bubble":bubbleSort, "selection":selectionSort, "insertion":insertionSort, "merge":mergeSort}
+algo = {
+        "bubble":bubbleSort, "selection":selectionSort,
+        "insertion":insertionSort, "merge":mergeSort,
+        "quick":quickSort
+        }
 
 print("Generating a MILLION data items...")
 data = [random.randint(0,1000) for x in range(1000000)]
@@ -18,4 +22,4 @@ while True:
     t1 = time.clock()
     algo[algoChoice](data)
     t2 = time.clock()
-    print("Time taken to sort: %f" % (t2-t1))
+    print("Time taken to sort: %f milliseconds" % ((t2-t1)*1000))

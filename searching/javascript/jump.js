@@ -5,14 +5,13 @@
 *optimal size of a block to be jumped is O(√ n)
 */
 
-function jumpSearch(arr,x,n){
-    // Finding block size to be jumped
+function jumpSearch(data,value,n){
+    // find the block size to jump
     var step = Math.sqrt(n);
  
-    // Finding the block where element is
-    // present (if it is present)
+    // find block where element may present
     var prev = 0;
-    while (arr[Math.min(step, n)-1] < x){
+    while (data[Math.min(step, n)-1] < value){
         prev = step;
         step += Math.sqrt(n);
         if (prev >= n){
@@ -20,18 +19,16 @@ function jumpSearch(arr,x,n){
         }
     }
  
-    // Doing a linear search for x in block
-    // beginning with prev.
-    while (arr[prev] < x){
+    // linear search(other searches may also be applied) for value in block beginning with prev.
+    while (data[prev] < value){
         prev++;
  
-        // If we reached next block or end of
-        // array, element is not present.
+        // if reached end of array or next block, element is not present.
         if (prev == Math.min(step, n))
             return "element does not exists";
     }
     // If element is found
-    if (arr[prev] == x){
+    if (data[prev] == value){
         return "find at index "+prev;
     }
     

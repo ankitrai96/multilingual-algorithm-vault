@@ -16,4 +16,4 @@ while True:
     t1 = time.clock()
     linearSearch(data, search) if algo == "linear" else binarySearch(sortedData, 0, 999999, search)
     t2 = time.clock()
-    print("Running Time Taken = %f" % (t2-t1))
+    print("Running Time Taken = %f milliseconds" % ((t2-t1)*1000))
