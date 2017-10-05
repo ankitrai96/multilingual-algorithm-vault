@@ -5,7 +5,7 @@
 *optimal size of a block to be jumped is O(√ n)
 */
 
-function jump(arr,x,n){
+function jumpSearch(arr,x,n){
     // Finding block size to be jumped
     var step = Math.sqrt(n);
  

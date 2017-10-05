@@ -5,7 +5,7 @@
 */
 
 
-function interpolation(arr,n,x){
+function interpolationSearch(arr,n,x){
     // Find indexes of two corners
     var lo = 0, hi = (n - 1);
  

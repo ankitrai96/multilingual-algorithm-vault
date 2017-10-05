@@ -6,7 +6,7 @@
 *when input array is almost sorted
 */
 
-function insertion(arr,n)
+function insertionSort(arr,n)
 {
    var i, key, j;
    for (i = 1; i < n; i++){

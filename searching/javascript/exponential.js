@@ -5,7 +5,7 @@
 *uses binary search
 */
 
-function exponential(arr,n,x){
+function exponentialSearch(arr,n,x){
     // If x is present at firt location itself
     if (arr[0] == x){
         return "find at index "+0;

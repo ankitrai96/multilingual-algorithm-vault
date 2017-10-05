@@ -5,7 +5,7 @@
 */
 
 
-function selection(arr,n){
+function selectionSort(arr,n){
     // One by one move boundary of unsorted subarray
     for (var i = 0; i < n-1; i++){
             // Find the minimum element in unsorted array

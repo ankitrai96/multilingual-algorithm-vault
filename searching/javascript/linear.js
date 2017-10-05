@@ -4,7 +4,7 @@
 */
 
 
-function linear(data,value){
+function linearSearch(data,value){
     //alert("hi");
     for(var i=0;i<1000000;i++){
         if(data[i]==value){

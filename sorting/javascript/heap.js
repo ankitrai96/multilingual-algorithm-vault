@@ -33,7 +33,7 @@ function heapify(arr,n,i){
 }
  
 // main function to do heap sort
-function heap(arr,n){
+function heapSort(arr,n){
     // Build heap (rearrange array)
     for (var i = n / 2 - 1; i >= 0; i--){
         heapify(arr, n, i);
