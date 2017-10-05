@@ -6,17 +6,18 @@
 */
 
 function exponentialSearch(data,n,value){
-    // If x is present at firt location itself
+    // If value is at the first place
     if (data[0] == value){
         return "find at index "+0;
     }  
- 
-    // Find range for binary search by repeated doubling
+    
+    // finding range for searching element
+    //for binary_Search
     var i = 1;
     while (i < n && data[i] <= value){
-        i *= 2;
+        i = i*2;
     }       
  
-    //  Calling binary search for the founded range.
-    return binary(data, i / 2, Math.min(i, n), value);
+    //  executing binary_Search for the resulting range.
+    return binarySearch(data, i/2, Math.min(i, n), value);
 }

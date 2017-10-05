@@ -5,21 +5,20 @@
 */
 
 
-function selectionSort(arr,n){
-    // One by one move boundary of unsorted subarray
+function selectionSort(data,n){
+    // step wise move boundary of the unsorted sub array
     for (var i = 0; i < n-1; i++){
-            // Find the minimum element in unsorted array
-            var min_idx = i;
+            // Finding the min value in the unsorted array
+            var min = i;
             for (var j = i+1; j < n; j++){
-                if (arr[j] < arr[min_idx]){
-                    min_idx = j;
+                if (data[j] < data[min]){
+                    min = j;
                 }
             }
  
-            // Swap the found minimum element with the first
-            // element
-            var temp = arr[min_idx];
-            arr[min_idx] = arr[i];
-            arr[i] = temp;
+            // Swap the founded min element with the first
+            var temp = data[min];
+            data[min] = data[i];
+            data[i] = temp;
         }
 }

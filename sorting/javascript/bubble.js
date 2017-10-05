@@ -5,14 +5,14 @@
 *repeatedly swap the adjacent elements if they are in wrong order
 */
 
-function bubbleSort(arr,n){
+function bubbleSort(data,n){
     for (var i = 0; i < n-1; i++){
         for (var j = 0; j < n-i-1; j++){
-            if (arr[j] > arr[j+1]){
-                // swap temp and arr[i]
-                var temp = arr[j];
-                arr[j] = arr[j+1];
-                arr[j+1] = temp;
+            if (data[j] > data[j+1]){
+                // swap data[j] and data[j+1]
+                var temp = data[j];
+                data[j] = data[j+1];
+                data[j+1] = temp;
             }
         }
     }
