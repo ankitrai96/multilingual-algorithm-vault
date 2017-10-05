@@ -5,28 +5,25 @@
 */
 
 
-function interpolationSearch(arr,n,x){
-    // Find indexes of two corners
+function interpolationSearch(data,n,value){
+    // Find both ends index
     var lo = 0, hi = (n - 1);
  
-    // Since array is sorted, an element present
-    // in array must be in range defined by corner
-    while (lo <= hi && x >= arr[lo] && x <= arr[hi]){
-        // Probing the position with keeping
-        // uniform distribution in mind.
-        var pos = lo + (((hi-lo) /
-              (arr[hi]-arr[lo]))*(x - arr[lo]));
+    // as array is sorted if value exists in the arraythan it is between the ends
+    while (lo <= hi && value >= data[lo] && value <= data[hi]){
+        // assuming the position acc to uniform distribution.
+        var pos = lo + (((hi - lo) / (data[hi] - data[lo])) * (value - data[lo]));
  
-        // Condition of target found
-        if (arr[pos] == x){
+        // value found
+        if (data[pos] == value){
             return "find at index "+pos;
         }   
  
-        // If x is larger, x is in upper part
-        if (arr[pos] < x){
+        // If pos is smaller, value is in upper part
+        if (data[pos] < value){
             lo = pos + 1;
         }
-        // If x is smaller, x is in lower part
+        // If pos is larger, value is in lower part
         else{
             hi = pos - 1;
         }

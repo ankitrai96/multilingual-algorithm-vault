@@ -6,20 +6,17 @@
 *when input array is almost sorted
 */
 
-function insertionSort(arr,n)
-{
-   var i, key, j;
+function insertionSort(data,n){
+   var i, j, key;
    for (i = 1; i < n; i++){
-       key = arr[i];
-       j = i-1;
+       key = data[i];
+       j = i - 1;
  
-       /* Move elements of arr[0..i-1], that are
-          greater than key, to one position ahead
-          of their current position */
-       while (j >= 0 && arr[j] > key){
-           arr[j+1] = arr[j];
-           j = j-1;
+       // fix the key to its exact position by shifting all the elements larger to it to the next position
+       while (j >= 0 && data[j] > key){
+           data[j + 1] = data[j];
+           j = j - 1;
        }
-       arr[j+1] = key;
+       data[j + 1] = key;
    }
 }

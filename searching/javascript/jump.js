@@ -1,18 +1,17 @@
 /*
 *Time Complexity:- O(√ n)
-*Works only in sorted arrays
+*Works only in sorted dataays
 *effective than binary search in case element to search is towards the ends.
 *optimal size of a block to be jumped is O(√ n)
 */
 
-function jumpSearch(arr,x,n){
-    // Finding block size to be jumped
+function jumpSearch(data, n, value){
+    // Finding block-size to jump
     var step = Math.sqrt(n);
  
-    // Finding the block where element is
-    // present (if it is present)
+    // Find the block where element may present
     var prev = 0;
-    while (arr[Math.min(step, n)-1] < x){
+    while (data[Math.min(step, n) - 1] < value){
         prev = step;
         step += Math.sqrt(n);
         if (prev >= n){
@@ -20,18 +19,16 @@ function jumpSearch(arr,x,n){
         }
     }
  
-    // Doing a linear search for x in block
-    // beginning with prev.
-    while (arr[prev] < x){
+    // linear search for value in block begins with prev.
+    while (data[prev] < value){
         prev++;
  
-        // If we reached next block or end of
-        // array, element is not present.
+        // reached the next-block or ending of the array means element is not present.
         if (prev == Math.min(step, n))
             return "element does not exists";
     }
-    // If element is found
-    if (arr[prev] == x){
+    // If value is found
+    if (data[prev] == value){
         return "find at index "+prev;
     }
     

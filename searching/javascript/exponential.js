@@ -5,19 +5,19 @@
 *uses binary search
 */
 
-function exponentialSearch(arr,n,x){
-    // If x is present at firt location itself
-    if (arr[0] == x){
+function exponentialSearch(data,n,value){
+    // If value is at the first place
+    if (data[0] == value){
         return "find at index "+0;
     }  
- 
-    // Find range for binary search by
-    // repeated doubling
+    
+    // finding range for searching element
+    //for binary_Search
     var i = 1;
-    while (i < n && arr[i] <= x){
+    while (i < n && data[i] <= value){
         i = i*2;
     }       
  
-    //  Call binary search for the found range.
-    return binary(arr, i/2, Math.min(i, n), x);
+    //  executing binary_Search for the resulting range.
+    return binarySearch(data, i/2, Math.min(i, n), value);
 }
