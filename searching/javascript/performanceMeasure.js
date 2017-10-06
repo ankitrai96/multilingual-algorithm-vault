@@ -1,3 +1,4 @@
+const main = require('../../driverPrograms/main');
 const linear = require('./linear');
 const binary = require('./binary');
 const jump = require('./jump');
@@ -15,30 +16,30 @@ function checkSearchPerformance(data,data1,algo,n,value){
             switch(algo){//searching algo
                 case "linear":
                     result = linear.linearSearch(data,value);
-                    //reset();
+                    main.reset();
                     break;
         
                 case "binary":
                     result = binary.binarySearch(data1,0,n-1,value);
-                    //reset();
+                    main.reset();
                     break;
                 case "jump":
                     result = jump.jumpSearch(data1,n,value);
-                    //reset();
+                    main.reset();
                     break;
                 case "interpolation":
                     result = interpolation.interpolationSearch(data1,n,value);
-                    //reset();
+                    main.reset();
                     break;
                 case "exponential":
                     result = exponential.exponentialSearch(data1,n,value);
-                    //reset();
+                    main.reset();
                     break;
                 default:
                     result = linearSearch(data,value);
-                    //reset();
+                    main.reset();
             }
-            console.log(result);
+            //console.log(result);
             var t1 = Date.now();
             avgTime += (t1 - t0);
             /*  TO-DO
@@ -47,6 +48,6 @@ function checkSearchPerformance(data,data1,algo,n,value){
             */
         }
         avgTime = avgTime.toFixed(4) / 10;
-        console.log("avg time = "+avgTime.toFixed(4));
+        console.log("avg time = " + avgTime.toFixed(4) + " ms");
         //document.getElementById("searchTime").innerHTML = 'Took average of '+ avgTime.toFixed(4) + ' milliseconds';
 }

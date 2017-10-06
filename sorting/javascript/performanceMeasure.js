@@ -55,7 +55,7 @@ function checkSortPerformance(data2,algo,n1,value){
                     selection.selectionSort(data2,n1);
                     result=data2;    
             }
-            console.log(result);
+            //console.log(result);
             var t1 = Date.now();
             avgTime += (t1 - t0);
             /*  TO-DO
@@ -65,6 +65,6 @@ function checkSortPerformance(data2,algo,n1,value){
         }
         
         avgTime = avgTime.toFixed(4) / 10;
-        console.log("avg time = "+avgTime.toFixed(4));
+        console.log("avg time = " + avgTime.toFixed(4) + " ms");
         //document.getElementById("sortTime").innerHTML = 'Took average of '+ avgTime.toFixed(4) + ' milliseconds';
 }
