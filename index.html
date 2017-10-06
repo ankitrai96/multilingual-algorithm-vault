@@ -1,3 +1,82 @@
-<!-- Front-End Code goes here! -->
-<!-- Intuitive and Interactive -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Searching Algo</title>
+        <!--searching algorithms-->
+        <script src="searching/javascript/linear.js" ></script>
+        <script src="searching/javascript/binary.js" ></script>
+        <script src="searching/javascript/jump.js" ></script>
+        <script src="searching/javascript/interpolation.js" ></script>
+        <script src="searching/javascript/exponential.js" ></script>
 
+        <!--sorting algorithms-->
+        <script src="sorting/javascript/selection.js" ></script>
+        <script src="sorting/javascript/bubble.js" ></script>
+        <script src="sorting/javascript/insertion.js" ></script>
+        <script src="sorting/javascript/quick.js" ></script>
+        <script src="sorting/javascript/merge.js" ></script>
+        <script src="sorting/javascript/heap.js" ></script>
+        <script src="sorting/javascript/counting.js" ></script>
+        <script src="sorting/javascript/radix.js" ></script>
+
+        <!--driver program-->
+        <script src="main.js" ></script>
+        
+        <!--sub driver/performance measure program-->
+        <script src="searching/javascript/performanceMeasure.js" ></script>
+        <script src="sorting/javascript/performanceMeasure.js" ></script>
+        
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>Performance Measurement of searching algorithms</h1>
+            </div>
+            <div class="about">
+                     
+            </div> 
+            <div class="left">
+                       
+            </div>
+            <div class="right">
+
+            </div>   
+            <div class="body">
+                <p>Please select a <b>searching algorithm</b> to check its performance</p>    
+                <select id="searching_algorithm" onchange=algorithm(value)>
+                        <option value="linear">Linear Search</option>
+                        <option value="binary">Binary Search</option>
+                        <option value="jump">Jump Search</option>
+                        <option value="interpolation">Interpolation Search</option>
+                        <option value="exponential">Exponential Search</option>
+                </select>
+                <button onclick=checkSearchPerformance()>Check</button>
+                
+                <p id="searchTime"></p>
+                <p id="searchResult"></p>
+
+                <p>Please select a <b>sorting algorithm</b> to check its performance</p>    
+                <select id="sorting_algorithm" onchange=algorithm(value)>
+                    <option value="selection">Selection Sort</option>
+                    <option value="bubble">Bubble Sort</option>
+                    <option value="insertion">Insertion Sort</option>
+                    <option value="quick">Quick Sort</option>
+                    <option value="merge">Merge Sort</option>
+                    <option value="heap">Heap Sort</option>
+                    <option value="counting">Counting Sort</option>
+                    <option value="radix">Radix Sort</option>
+                </select>
+                <button onclick=checkSortPerformance()>Check</button>
+                
+                <p id="sortTime"></p>
+                <p id="SortResult"></p>
+            </div>
+            <div class="footer">
+                
+            </div>
+        </div>        
+    </body>
+</html>
