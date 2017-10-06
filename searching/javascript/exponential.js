@@ -5,6 +5,12 @@
 *uses binary search
 */
 
+const binary = require('./binary');
+
+module.exports = {
+    exponentialSearch : exponentialSearch
+}
+
 function exponentialSearch(data,n,value){
     // If value is at the first place
     if (data[0] == value){
@@ -19,5 +25,5 @@ function exponentialSearch(data,n,value){
     }       
  
     //  executing binary_Search for the resulting range.
-    return binarySearch(data, i/2, Math.min(i, n), value);
+    return binary.binarySearch(data, i/2, Math.min(i, n), value);
 }

@@ -5,6 +5,10 @@
 *optimal size of a block to be jumped is O(√ n)
 */
 
+module.exports = {
+    jumpSearch : jumpSearch
+}
+
 function jumpSearch(data, n, value){
     // Finding block-size to jump
     var step = Math.sqrt(n);

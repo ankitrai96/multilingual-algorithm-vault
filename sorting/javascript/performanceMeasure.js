@@ -1,46 +1,62 @@
-function checkSortPerformance(token){
+const selection = require('./selection');
+const bubble = require('./bubble');
+const insertion = require('./insertion');
+const quick = require('./quick');
+const merge = require('./merge');
+const heap = require('./heap');
+const counting = require('./counting');
+
+const radix = require('./radix');
+
+var avgTime=0;
+module.exports = {
+    checkSortPerformance : checkSortPerformance
+}
+
+
+function checkSortPerformance(data2,algo,n1,value){
     for(var index=0;index<10;index++){
-        var t0 = performance.now();
+        var t0 = Date.now();
             switch(algo){
                 case "selection":
-                    selectionSort(data2,n1);
+                    selection.selectionSort(data2,n1);
                     result=data2;
                     break;
                 case "bubble":
-                    bubbleSort(data2,n1);
+                    bubble.bubbleSort(data2,n1);
                     result=data2;
                     break;
                 case "insertion":
-                    insertionSort(data2,n1);
+                    insertion.insertionSort(data2,n1);
                     result=data2;
                     break;
                 case "quick":
-                    quickSort(data2,n1);
+                    quick.quickSort(data2,n1);
                     result=data2;
                     break;
                 case "merge":
-                    mergeSort(data2,n1);
+                    merge.mergeSort(data2,n1);
                     result=data2;
                     break;
                 case "heap":
-                    heapSort(data2,n1);
+                    heap.heapSort(data2,n1);
                     result=data2;
                     break;
                 case "counting":
-                    countingSort(data2,n1);
+                    counting.countingSort(data2,n1);
                     result=data2;
                     break;
                 case "radix":
-                    radixSort(data2,n1);
+                    radix.radixSort(data2,n1);
                     result=data2;
                     break;
 
                 default:
-                    selectionSort(data2,n1);
+                    selection.selectionSort(data2,n1);
                     result=data2;    
             }
             console.log(result);
-            var t1 = performance.now();
+            var t1 = Date.now();
             avgTime += (t1 - t0);
             /*  TO-DO
             *   document.getElementById("time").innerHTML += 'Took '+ (t1 - t0).toFixed(4) + ' milliseconds<br> ';
@@ -48,6 +64,7 @@ function checkSortPerformance(token){
             */
         }
         
-        avgTime /= 10;
-        document.getElementById("sortTime").innerHTML = 'Took average of '+ avgTime.toFixed(4) + ' milliseconds';
+        avgTime = avgTime.toFixed(4) / 10;
+        console.log("avg time = "+avgTime.toFixed(4));
+        //document.getElementById("sortTime").innerHTML = 'Took average of '+ avgTime.toFixed(4) + ' milliseconds';
 }

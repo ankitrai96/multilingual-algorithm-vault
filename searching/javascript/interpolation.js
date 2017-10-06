@@ -4,6 +4,9 @@
 *interpolation search may go to different locations according the value of key being searched
 */
 
+module.exports = {
+    interpolationSearch : interpolationSearch
+}
 
 function interpolationSearch(data,n,value){
     // Find both ends index

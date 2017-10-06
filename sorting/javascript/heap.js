@@ -6,6 +6,10 @@
 *k largest(or smallest) elements in an array
 */
 
+module.exports = {
+    heapSort : heapSort
+}
+
 function heapify(data, n, i){
     var largest = i;  // Initializing the largest element as root
     var l = 2 * i + 1;  // left child

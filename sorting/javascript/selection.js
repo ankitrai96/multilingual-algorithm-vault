@@ -4,6 +4,9 @@
 *Memory efficient as auxilarry space is O(1)
 */
 
+module.exports = {
+    selectionSort : selectionSort
+}
 
 function selectionSort(data,n){
     // step wise move boundary of the unsorted sub array

@@ -1,3 +1,7 @@
+module.exports = {
+    quickSort : quickSort
+}
+
 function quickSort(){
-    alert("we will update it soon...");
+    console.log("we will update it soon...");
 }

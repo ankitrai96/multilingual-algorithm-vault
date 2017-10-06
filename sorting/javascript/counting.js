@@ -1,3 +1,7 @@
+module.exports = {
+    countingSort : countingSort
+}
+
 function countingSort(){
-    alert("we will update it soon...");
+    console.log("we will update it soon...");
 }

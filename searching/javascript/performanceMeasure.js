@@ -1,41 +1,52 @@
-function checkSearchPerformance(){
+const linear = require('./linear');
+const binary = require('./binary');
+const jump = require('./jump');
+const exponential = require('./exponential');
+const interpolation = require('./interpolation');
+
+var avgTime=0;
+module.exports = {
+    checkSearchPerformance : checkSearchPerformance
+}
+
+function checkSearchPerformance(data,data1,algo,n,value){
     for(var index=0;index<10;index++){
-        var t0 = performance.now();
+        var t0 = Date.now();
             switch(algo){//searching algo
                 case "linear":
-                    result = linearSearch(data,value);
-                    reset();
+                    result = linear.linearSearch(data,value);
+                    //reset();
                     break;
         
                 case "binary":
-                    result = binarySearch(data1,0,n-1,value);
-                    reset();
+                    result = binary.binarySearch(data1,0,n-1,value);
+                    //reset();
                     break;
                 case "jump":
-                    result = jumpSearch(data1,n,value);
-                    reset();
+                    result = jump.jumpSearch(data1,n,value);
+                    //reset();
                     break;
                 case "interpolation":
-                    result = interpolationSearch(data1,n,value);
-                    reset();
+                    result = interpolation.interpolationSearch(data1,n,value);
+                    //reset();
                     break;
                 case "exponential":
-                    result = exponentialSearch(data1,n,value);
-                    reset();
+                    result = exponential.exponentialSearch(data1,n,value);
+                    //reset();
                     break;
                 default:
                     result = linearSearch(data,value);
-                    reset();
+                    //reset();
             }
             console.log(result);
-            var t1 = performance.now();
+            var t1 = Date.now();
             avgTime += (t1 - t0);
             /*  TO-DO
             *   document.getElementById("time").innerHTML += 'Took '+ (t1 - t0).toFixed(4) + ' milliseconds<br> ';
             *   document.getElementById("result").innerHTML += result + "<br>";
             */
         }
-        
-        avgTime /= 10;
-        document.getElementById("searchTime").innerHTML = 'Took average of '+ avgTime.toFixed(4) + ' milliseconds';
+        avgTime = avgTime.toFixed(4) / 10;
+        console.log("avg time = "+avgTime.toFixed(4));
+        //document.getElementById("searchTime").innerHTML = 'Took average of '+ avgTime.toFixed(4) + ' milliseconds';
 }

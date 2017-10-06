@@ -3,6 +3,9 @@
 *starts from one end and search till the last element untill the desired element is found
 */
 
+module.exports = {
+    linearSearch : linearSearch
+}
 
 function linearSearch(data,value){
     for(var i=0;i<1000000;i++){

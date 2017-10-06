@@ -7,6 +7,10 @@
 *Used in External Sorting
 */
 
+module.exports = {
+    mergeSort : mergeSort
+}
+
 function merge(data,l,m,r){
     var i, j, k;
     var m1 = m - l + 1;
