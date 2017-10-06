@@ -4,22 +4,28 @@ class Linear{
     static int a[]=new int[1000000];
     static int search;
     public static void main(String s[]){
+        System.out.print("Enter the number do you want to search(0-1000000):: ");
         Scanner p=new Scanner(System.in);
         search =p.nextInt();
         Random randomGenerator=new Random();
         for (int i=0;i<1000000;i++){
-            int random=randomGenerator.nextInt(10000);
+            int random=randomGenerator.nextInt(1000000);
             a[i]=random;
         }
         float time1=System.nanoTime();
-        Linear.linearSearch();
+        int z=Linear.linearSearch();
         float time2=System.nanoTime();
-        System.out.print(time2-time1+" nanasec");
+        if(z==1){
+            System.out.println("Found:: "+(time2-time1)+" nano sec");
+        }
+        else{
+            System.out.println("Not Found:: "+(time2-time1)+" nano sec");
+        }
     }
     static int linearSearch(){
         for(int i=0;i<a.length;i++){
             if(a[i]==search){
-                return i;
+                return 1;
             }
         }
         return 0;
