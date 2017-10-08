@@ -1,5 +1,3 @@
-import java.time.Duration;
-import java.time.Instant;
 import java.util.*;
 public class PerformanceMeasure {
      public static int a[]=new int[10000000];
