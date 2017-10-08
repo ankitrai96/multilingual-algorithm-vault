@@ -1,10 +1,12 @@
 import time
 import random
-from linearSearch import linearSearch
+import sys
+sys.path.append('/home/')
+from sorting.python3.linearSearch import linearSearch
 from binarySearch import binarySearch
 
 # make a pool outta random numbers
-print("Generating a MILLION data items...")
+print("Generating data items...")
 data = [random.randint(0,1000) for x in range(1000000)]
 print("Data pool generated.")
 sortedData = sorted(data)

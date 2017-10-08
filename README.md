@@ -1,3 +1,8 @@
+<!-- 
+    To-Do
+    1. Incorporate goals and usage post restructuring 
+ -->
+
 ## Multilingual Algorithm Vault
 As the name suggests, this repository is a consolidated analysis of various data structures and algorithms.
 

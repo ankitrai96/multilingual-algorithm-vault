@@ -1,5 +1,7 @@
 import time
 import random
+import os
+os.path.realpath(os.path.abspath(os.path.split(inspect.‌​getfile( inspect.currentframe() ))[0]) + "/subfolder")
 from bubbleSort import bubbleSort
 from insertionSort import insertionSort
 from selectionSort import selectionSort
