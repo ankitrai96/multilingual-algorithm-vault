@@ -9,7 +9,7 @@ module.exports = {
     bubbleSort : bubbleSort
 }
 
-function bubbleSort(data,n){
+function bubbleSort(data,l,n){
     for (var i = 0; i < n-1; i++){
         for (var j = 0; j < n-i-1; j++){
             if (data[j] > data[j+1]){

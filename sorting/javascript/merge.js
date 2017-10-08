@@ -56,7 +56,7 @@ function merge(data,l,m,r){
     }
 }
 
-function mergeSort(data,n){
+function mergeSort(data,l,n){
    var curr_size;  // size (1 to n/2) of subarrays to be merged 
    var left_start;
 

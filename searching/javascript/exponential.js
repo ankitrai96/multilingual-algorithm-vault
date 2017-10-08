@@ -11,7 +11,7 @@ module.exports = {
     exponentialSearch : exponentialSearch
 }
 
-function exponentialSearch(data,n,value){
+function exponentialSearch(data,l,n,value){
     // If value is at the first place
     if (data[0] == value){
         return "find at index "+0;

@@ -36,7 +36,7 @@ function heapify(data, n, i){
     }
 }
  
-function heapSort(data,n){
+function heapSort(data,l,n){
     // call Build heap to rearrange arrays
     for (var i = n / 2 - 1; i >= 0; i--){
         heapify(data, n, i);

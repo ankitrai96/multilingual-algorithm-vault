@@ -7,7 +7,7 @@ module.exports = {
     linearSearch : linearSearch
 }
 
-function linearSearch(data,value){
+function linearSearch(data,l,n,value){
     for(var i=0;i<1000000;i++){
         if(data[i]==value){
             return "find first at index "+i;

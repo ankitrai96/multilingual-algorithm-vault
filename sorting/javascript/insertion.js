@@ -10,7 +10,7 @@ module.exports = {
     insertionSort : insertionSort
 }
 
-function insertionSort(data,n){
+function insertionSort(data,l,n){
    var i, j, key;
    for (i = 1; i < n; i++){
        key = data[i];

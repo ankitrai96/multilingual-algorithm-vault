@@ -9,7 +9,7 @@ module.exports = {
     jumpSearch : jumpSearch
 }
 
-function jumpSearch(data, n, value){
+function jumpSearch(data,l, n, value){
     // Finding block-size to jump
     var step = Math.sqrt(n);
  
