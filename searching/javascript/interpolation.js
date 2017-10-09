@@ -4,10 +4,13 @@
 *interpolation search may go to different locations according the value of key being searched
 */
 
+module.exports = {
+    interpolationSearch : interpolationSearch
+}
 
-function interpolationSearch(data,n,value){
+function interpolationSearch(data,lo,n,value){
     // Find both ends index
-    var lo = 0, hi = (n - 1);
+    hi = (n - 1);
  
     // as array is sorted if value exists in the arraythan it is between the ends
     while (lo <= hi && value >= data[lo] && value <= data[hi]){

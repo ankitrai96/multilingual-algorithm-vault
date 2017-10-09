@@ -4,6 +4,10 @@
 *starts Searching in a sorted array by repeatedly dividing the search interval in half
 */
 
+module.exports = {
+    binarySearch : binarySearch
+}
+
 function binarySearch(data,l,r,value){
     while (l <= r){
         var m = parseInt(l + (r-l)/2);

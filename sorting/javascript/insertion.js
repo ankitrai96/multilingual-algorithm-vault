@@ -6,7 +6,11 @@
 *when input array is almost sorted
 */
 
-function insertionSort(data,n){
+module.exports = {
+    insertionSort : insertionSort
+}
+
+function insertionSort(data,l,n){
    var i, j, key;
    for (i = 1; i < n; i++){
        key = data[i];

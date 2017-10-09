@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import sys
 #To-Do: gotta make it independent of absolute path
 sys.path.insert(0, '/home/ankitrai96/Documents/Work/multilingual-algorithm-vault')
@@ -19,3 +20,10 @@ class sortVault:
 class searchVault:
     def binary(self = None) :return binarySearch    
     def linear(self = None) : return linearSearch
+=======
+""" 
+    This file is inteded to be as modular as possible!
+    Purpose: To import all the other algorithmic files
+    so as to act as a ready-made library for others.
+"""
+>>>>>>> jaggaMess
