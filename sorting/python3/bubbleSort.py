@@ -1,4 +1,4 @@
-def bubbleSort(data):
+def bubbleSort(data,garbage1=None,garbage2=None,garbage3=None):
     l = len(data)
     for x in range(l):
         for y in range(0,l-x-1):

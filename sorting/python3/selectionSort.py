@@ -1,4 +1,4 @@
-def selectionSort(data):
+def selectionSort(data,garbage1=None,garbage2=None,garbage3=None):
     l = len(data)
     for x in range(l):
         least = x

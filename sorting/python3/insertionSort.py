@@ -1,4 +1,4 @@
-def insertionSort(data):
+def insertionSort(data,garbage1=None,garbage2=None,garbage3=None):
     l = len(data)
     for x in range(1,l):
         i = x

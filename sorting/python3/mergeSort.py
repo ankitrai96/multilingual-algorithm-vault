@@ -1,4 +1,4 @@
-def mergeSort(data):
+def mergeSort(data,garbage1=None,garbage2=None,garbage3=None):
     if len(data) > 1:
         mid = len(data) //2
         leftPart = data[:mid]
