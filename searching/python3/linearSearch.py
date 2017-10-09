@@ -4,7 +4,7 @@
 # note that it returns position of the
 ## first element found in given list
 
-def linearSearch(pool,item):
+def linearSearch(pool,item,junk1=0,junk2=0):
     for x in range(len(pool)):
         if pool[x] == item: return x+1
     return False
