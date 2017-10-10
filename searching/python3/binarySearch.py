@@ -5,9 +5,9 @@
 ### 3) high - last index of current recursive call
 ### 4) item - the element to be searched in data pool
 
-def binarySearch(stock,item,low,high):
+def binarySearch(stock,low,high,item):
     if low > high:
-        return -1
+        return False
     mid = int((low+high)/2)
     if stock[mid] == item:
         return mid+1

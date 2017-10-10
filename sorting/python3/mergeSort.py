@@ -22,6 +22,7 @@ def mergeSort(data,garbage1=None,garbage2=None,garbage3=None):
             data[k] = rightPart[j]
             j += 1
             k += 1
+    return data
 if __name__ == "__main__":
     n = int(input("Enter number of data: "))
     data = [int(input()) for x in range(n)]

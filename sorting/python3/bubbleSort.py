@@ -6,6 +6,7 @@ def bubbleSort(data,garbage1=None,garbage2=None,garbage3=None):
                 temp = data[y]
                 data[y] = data[y+1]
                 data[y+1] = temp
+    return data
 if __name__ == "__main__":
     n = int(input("Enter number of data: "))
     data = [int(input()) for x in range(n)]

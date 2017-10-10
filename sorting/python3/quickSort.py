@@ -20,7 +20,7 @@ def partition(myList, start, end):
     return right
 
 
-def quickSort(myList, start=None, end=999999):
+def quickSort(myList,start,end,junk=None):
     if start < end:
         split = partition(myList, start, end)
         quickSort(myList, start, split-1)

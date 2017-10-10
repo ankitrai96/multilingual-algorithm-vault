@@ -7,7 +7,7 @@ def selectionSort(data,garbage1=None,garbage2=None,garbage3=None):
                 temp = data[y]
                 data[y] = data[least]
                 data[least] = temp
-
+    return data
 if __name__ == "__main__":
     n = int(input("Enter number of data: "))
     data = [int(input()) for x in range(n)]

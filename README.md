@@ -27,7 +27,7 @@ First things first, grab a copy of this repository for your local machine!
 
 Now, in addition to being hackable this repository offers the following out of the box features:-
 
-- **Library** which make various algorithms importable for you to use directly in your projects. To know more, navigate to "importables" directory
+- **Library** which make various algorithms importable for you to use directly in your projects. To know more, navigate to [importables directory](https://github.com/ankitrai96/multilingual-algorithm-vault/tree/master/importables)
 - **Performance Analysis** to see how different algorithms' asymptotic runtime translate against real life machine and data set. To know more, navigate to "performanceAnalysis" directory
 
 <!-- ### Sorting Algorithms
