@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-int insert_sort(int a[],int n)
+int insertSort(int a[],int n)
 {
 int i,j,key;
 for(i=1;i<=n;i++)
