@@ -22,6 +22,7 @@ public class LinearSearch{
         }
         System.out.print("enter value to search:");
         int value = sc.nextInt();
+        sc.close();
         int index = LinearSearch.search(data,n,value);
         if(index == -1){
             System.out.println("element does not exist");
